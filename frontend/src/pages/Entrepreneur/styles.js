@@ -213,7 +213,7 @@ export const HelpFooter = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 15px 20px 15px;
+  padding: 20px 15px 0px 15px;
 `;
 
 export const LightFooter = styled.img``;
@@ -225,7 +225,6 @@ export const TitleHelpFooter = styled.h2`
   font-size: 16px;
   line-height: 22px;
   text-align: right;
-
   color: #253368;
 `;
 
