@@ -1,73 +1,98 @@
 import luz from '../../assets/luz.svg';
-
-import * as STD from './styles';
 import userBadge from '../../assets/user.svg';
 import checkBadge from '../../assets/check.svg';
 import dollarBadge from '../../assets/dollar.svg';
 import newsBadge from '../../assets/news.svg';
 import detailsBadge from '../../assets/details.svg';
 
+import * as STD from './styles';
+
 const Entrepreneur = () => (
   <STD.Container>
     <STD.Help>
-      <STD.Light src={luz} />
-      <STD.TitleHelp>
+      <img alt="luz" src={luz} />
+      <STD.Title>
         Precisa de ajuda para <br /> começar?
-      </STD.TitleHelp>
+      </STD.Title>
     </STD.Help>
 
-    <STD.BoxPrimary>
-      <STD.BoxPrimaryChildrenLeft>
-        <STD.UserBadge src={userBadge} />
-        <STD.TextBoxPrimary>Formalize seu empreendimento como MEI ou ME</STD.TextBoxPrimary>
-      </STD.BoxPrimaryChildrenLeft>
+    <STD.RowBox>
+      <STD.LeftBox>
+        <STD.Card>
+          <img alt="userBadge" src={userBadge} />
+          <STD.TextBox>Formalize seu empreendimento como MEI ou ME</STD.TextBox>
+        </STD.Card>
+      </STD.LeftBox>
 
-      <STD.BoxPrimaryChildrenCenter>
-        <STD.BorderPrimary></STD.BorderPrimary>
-      </STD.BoxPrimaryChildrenCenter>
+      <STD.RightBox>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </STD.RightBox>
 
-      <STD.BoxPrimaryChildrenEnd></STD.BoxPrimaryChildrenEnd>
-    </STD.BoxPrimary>
+    </STD.RowBox>
 
-    <STD.BoxSecond>
-      <STD.BoxPrimaryChildrenCenter>
-        <STD.BorderSecond></STD.BorderSecond>
-      </STD.BoxPrimaryChildrenCenter>
+    <STD.RowBox>
+      <STD.LeftBox>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </STD.LeftBox>
 
-      <STD.BoxPrimaryChildrenEnd></STD.BoxPrimaryChildrenEnd>
-      <STD.BoxSecondChildrenLeft>
-        <STD.CheckBadge src={checkBadge} />
-        <STD.TextBoxSecond>Se inscreva no município e emita seu alvará de funcionamento</STD.TextBoxSecond>
-      </STD.BoxSecondChildrenLeft>
-    </STD.BoxSecond>
+      <STD.RightBox>
+        <STD.Card>
+          <img alt="checkBadge" src={checkBadge} />
+          <STD.TextBox>Se inscreva no município e emita seu alvará de funcionamento</STD.TextBox>
+        </STD.Card>
+      </STD.RightBox>
+    </STD.RowBox>
 
-    <STD.BoxThird>
-      <STD.BoxThirdChildrenLeft>
-        <STD.DollarBadge src={dollarBadge} />
-        <STD.TextBoxThird>Se prepare para emitir notas fiscais e saiba as possibilidades de emissão</STD.TextBoxThird>
-      </STD.BoxThirdChildrenLeft>
-      <STD.BoxPrimaryChildrenCenter>
-        <STD.BorderThird></STD.BorderThird>
-      </STD.BoxPrimaryChildrenCenter>
+    <STD.RowBox>
+      <STD.LeftBox>
+        <STD.Card>
+          <img alt="dollarBadge" src={dollarBadge} />
+          <STD.TextBox>Se prepare para emitir notas fiscais e saiba as possibilidades de emissão</STD.TextBox>
+        </STD.Card>
+      </STD.LeftBox>
 
-      <STD.BoxPrimaryChildrenEnd></STD.BoxPrimaryChildrenEnd>
-    </STD.BoxThird>
+      <STD.RightBox>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </STD.RightBox>
+    </STD.RowBox>
 
-    <STD.BoxFourth>
-      <STD.BoxPrimaryChildrenCenter></STD.BoxPrimaryChildrenCenter>
+    <STD.RowBox>
+      <STD.LeftBox></STD.LeftBox>
 
-      <STD.BoxPrimaryChildrenEnd></STD.BoxPrimaryChildrenEnd>
-      <STD.BoxFourthChildrenLeft>
-        <STD.NewsBadge src={newsBadge} />
-        <STD.TextBoxFourth>Se prepare para emitir notas fiscais e saiba as possibilidades de emissão</STD.TextBoxFourth>
-      </STD.BoxFourthChildrenLeft>
-    </STD.BoxFourth>
+      <STD.RightBox>
+        <STD.Card>
+          <img alt="newsBadge" src={newsBadge} />
+          <STD.TextBox>Se prepare para emitir notas fiscais e saiba as possibilidades de emissão</STD.TextBox>
+        </STD.Card>
+      </STD.RightBox>
+    </STD.RowBox>
 
     <STD.HelpFooter>
       <STD.TitleHelpFooter>
       Concorra nos editais de licitação das compras públicas e contribua para o crescimento da sua cidade
       </STD.TitleHelpFooter>
-      <STD.LightFooter src={detailsBadge} />
+      <img alt="detailsBadge" src={detailsBadge} />
     </STD.HelpFooter>
   </STD.Container>
 );

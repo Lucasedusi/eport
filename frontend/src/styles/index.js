@@ -49,15 +49,24 @@ export const GlobalStyle = createGlobalStyle`
     /* General sidebar styles */
     .bm-menu {
       background: ${({ theme }) => theme.colors.textOnSecondary};
-      padding: 2.5em 1.5em 0;
+      padding: 3rem 1.25rem 0;
       font-size: 1.15em;
 
-      a {
-        font-weight: 600;
-        color: ${({ theme }) => theme.colors.secondary};
+      nav {
 
-        &.active-link {
-          color: ${({ theme }) => theme.colors.primaryVariant};
+        a {
+          font-weight: 600;
+          display: flex !important;
+          align-items: center !important;
+          color: ${({ theme }) => theme.colors.secondary};
+
+          &.active-link {
+            color: ${({ theme }) => theme.colors.primaryVariant};
+          }
+
+          svg {
+            margin-right: 0.25rem;
+          }
         }
       }
     }

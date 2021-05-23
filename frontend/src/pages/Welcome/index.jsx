@@ -20,7 +20,7 @@ const Welcome = () => {
 
   useEffect(() => {
     const redirect = setTimeout(() => {
-      history.push('/dashboard');
+      history.push('/entrepreneur');
     }, 4000);
 
     return () => {
@@ -41,7 +41,7 @@ const Welcome = () => {
       </STD.SubTitle>
 
       <STD.Button>
-        <Link to="/dashboard">Começar</Link>
+        <Link to="/entrepreneur">Começar</Link>
       </STD.Button>
     </STD.Container>
   );

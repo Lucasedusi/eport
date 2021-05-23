@@ -61,7 +61,7 @@ const SignUp = () => {
   return (
     <STD.Container>
       <STD.Form>
-        <STD.Title>Bem vindo</STD.Title>
+        <STD.Title>Boas-vindas!</STD.Title>
         <STD.SubTitle>Sua jornada começa ao criar uma conta</STD.SubTitle>
         <STD.ErrorContainer>
           <STD.AlreadyExistError error={error}>
