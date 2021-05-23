@@ -29,11 +29,11 @@ module.exports = {
       name,
       username,
       password,
-      is_poster,
       segment_id,
       events_notification,
       public_bids_notification,
     } = user;
+
     if (!name || !username || !password) {
       throw  {
         status: 400,
@@ -53,7 +53,7 @@ module.exports = {
       name,
       username,
       password: await hash(password, 8),
-      is_poster,
+      is_poster: 0,
       segment_id,
       events_notification,
       public_bids_notification,
