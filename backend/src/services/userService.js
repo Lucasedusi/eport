@@ -45,7 +45,7 @@ module.exports = {
     if (userExist) {
       throw {
         status: 400,
-        message: 'username já existe'
+        message: 'username (CPF/CNPJ) já existe'
       };
     }
 

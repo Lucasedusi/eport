@@ -21,7 +21,7 @@ const Welcome = () => {
   useEffect(() => {
     const redirect = setTimeout(() => {
       history.push('/dashboard');
-    }, 3000);
+    }, 4000);
 
     return () => {
       clearTimeout(redirect);

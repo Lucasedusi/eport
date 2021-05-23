@@ -16,6 +16,7 @@ export const Logo = styled.img`
 
 export const Login = styled.h2`
   position: absolute;
+  cursor: pointer;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;

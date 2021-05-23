@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import api from '../services/api';
 import { sleep } from '../utils';
@@ -12,8 +13,10 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [storageUser, setStorageUser] = useLocalStorage('@roughwood:user');
-  const [storageToken, setStorageToken] = useLocalStorage('@roughwood:token');
+  const [storageUser, setStorageUser] = useLocalStorage('@eport:user');
+  const [storageToken, setStorageToken] = useLocalStorage('@eport:token');
+
+  const history = useHistory();
 
   useEffect(() => {
     setLoading(true);
@@ -34,6 +37,7 @@ export const AuthProvider = ({ children }) => {
         api.defaults.headers.Authorization = `Baerer ${token}`;
         setStorageUser(user);
         setStorageToken(token);
+        history.goBack();
       } catch (err) {
         setError(err.response);
       } finally {
@@ -73,7 +77,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ isUserSignedIn, user, signIn, signUp, signOut, loading, error }}
+      value={{ isUserSignedIn, user, signIn, signUp, signOut, loading, error, setError }}
     >
       {children}
     </AuthContext.Provider>

@@ -1,37 +1,32 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media(min-width: 767px) {
+    min-height: 100vh;
+  }
 `;
 
 export const Form = styled.form`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: ${({ theme }) => {
     return theme.title === 'light' ? '#fff' : theme.colors.primary;
   }};
   width: 100%;
-  max-width: 445px;
-  padding: 2.5rem;
-  border-radius: 4px;
-  border: 2px solid #cdd4d9;
-  box-shadow: 4px 4px rgba(6, 41, 66, 0.1);
-`;
-
-export const Title = styled.h1`
-  margin-bottom: 1rem;
-
-  img {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    color: ${({ theme }) => theme.colors.text};
-    text-align: center;
+  padding: 2rem;
+  @media(min-width: 767px) {
+    padding: 2.5rem;
+    border-radius: 4px;
+    border: 2px solid #cdd4d9;
+    max-width: 445px;
+    box-shadow: 4px 4px rgba(6, 41, 66, 0.1);
   }
 `;
 
@@ -48,36 +43,36 @@ export const NoInputError = styled.p`
 `;
 
 export const Input = styled.input`
-  font-size: 20px;
-  line-height: 24px;
-  padding: 10px 12px;
-  margin: 0.5rem 0;
-  height: 50px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: ${({ theme }) => theme.colors.text2};
+  margin-bottom: 1rem;
   width: 100%;
-  border-radius: 4px;
-  outline: none;
+  border: thin solid #666;
   background-color: ${({ theme }) => {
     return theme.title === 'light' ? '#fff' : '#ccc';
   }};
   border-color: ${({ error, value }) => (error && !value ? '#e81123' : 'none')};
+
+  &:focus {
+    border-radius: 10px;
+    border-color: ${({ theme }) => theme.colors.primary}
+  }
 `;
 
-export const Button = styled.button`
-  background-color: ${({ theme }) => {
-    return theme.title === 'light'
-      ? theme.colors.primary
-      : theme.colors.secondary;
-  }};
-  color: #fff;
-  font-size: 20px;
-  line-height: 24px;
-  padding: 10px 12px;
-  margin: 0.5rem 0;
-  height: 50px;
-  width: 100%;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
+export const Button = styled.div`
+  display: flex;
+
+  a {
+    background-color: ${({ theme }) => theme.colors.primary};
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: ${({ theme }) => theme.colors.textOnPrimary};
+
+    &:active {
+      background-color: ${({ theme }) => shade(0.2, theme.colors.primary)};
+    }
+  }
 `;
 
 export const ActionContainer = styled.div`

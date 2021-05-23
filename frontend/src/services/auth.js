@@ -9,7 +9,7 @@ export const signInService = async ({ username, password }) => {
 
 export const signUpService = async ({ name, username, password }) => {
   const user = { name, username, password };
-  const { data } = await api.post('user_admins', { user });
+  const { data } = await api.post('users', { user });
 
   return data;
 };
