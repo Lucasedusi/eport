@@ -87,3 +87,20 @@ export const FilterModalidade = styled.select`
   width: 100%;
   border-radius: 10px;
 `;
+
+export const Bidding = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 28px 20px;
+`;
+
+export const BiddingBox = styled.div`
+  display: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #ffffff;
+  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+`;

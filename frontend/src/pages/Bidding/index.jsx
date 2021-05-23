@@ -1,13 +1,6 @@
 import document from '../../assets/document.svg';
 
 import * as STD from './styles';
-import Select from 'react-select';
-
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
 
 const Bidding = () => (
   <STD.Container>
@@ -43,12 +36,16 @@ const Bidding = () => (
       <STD.BoxFilter>
         <STD.LabelModalidade>Data de abertura:</STD.LabelModalidade>
         <STD.FilterModalidade>
-        <option value>23/05/2021</option>
+          <option value>23/05/2021</option>
           <option>12/05/2021</option>
           <option>14/05/2021</option>
         </STD.FilterModalidade>
       </STD.BoxFilter>
     </STD.Content>
+
+    <STD.Bidding>
+      
+    </STD.Bidding>
   </STD.Container>
 );
 
