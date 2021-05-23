@@ -31,9 +31,10 @@ export const Title = styled.h2`
 export const Help = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+  width: 100%;
 `;
 
 export const TitleHelp = styled.h2`

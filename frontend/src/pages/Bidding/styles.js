@@ -139,7 +139,49 @@ export const BiddingModalidade = styled.p`
   text-align: center;
   color: #ffffff;
   background: #60afff;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  padding: 5px 10px;
+`;
+
+export const BiddingModalidadeOne = styled.p`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  background: #EEC643;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  padding: 5px 10px;
+`;
+
+export const BiddingModalidadeTwo = styled.p`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  background: #EE434D;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  padding: 5px 10px;
+`;
+
+export const BiddingModalidadeThre = styled.p`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  background: #9110CE;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.09);
   border-radius: 5px;
   padding: 5px 10px;
 `;

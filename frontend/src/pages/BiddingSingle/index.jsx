@@ -1,11 +1,18 @@
 import document from '../../assets/document.svg';
 
+import { FiChevronLeft } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+
 import * as STD from './styles';
 
 const Bidding = () => (
   <STD.Container>
     <STD.Help>
+      <Link to="/bidding">
+        <FiChevronLeft size={20} />
+      </Link>
       <STD.TitleHelp>Edital Nº 017/2021</STD.TitleHelp>
+      <STD.TitleHelp></STD.TitleHelp>
     </STD.Help>
 
     <STD.Content>
