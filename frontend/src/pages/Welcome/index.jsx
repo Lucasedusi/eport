@@ -20,7 +20,7 @@ const Welcome = () => {
 
   useEffect(() => {
     const redirect = setTimeout(() => {
-      history.push('/dashboard');
+      history.push('/entrepreneur');
     }, 4000);
 
     return () => {

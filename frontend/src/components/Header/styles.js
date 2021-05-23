@@ -6,6 +6,9 @@ export const Container = styled.header`
   align-items: flex-end;
   background-color: ${({ theme }) => theme.colors.secondary};
   padding-bottom: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 `;
 
 export const Logo = styled.img`
