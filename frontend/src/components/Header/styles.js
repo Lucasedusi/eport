@@ -11,13 +11,15 @@ export const Container = styled.header`
 export const Logo = styled.img`
   height: 42;
   width: 119;
+  margin: 0 auto;
 `;
 
 export const Login = styled.h2`
+  position: absolute;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  padding-right: 16px;
+  right: 18px;
   color: ${({ theme }) => theme.colors.textOnSecondary};
 `;
 
