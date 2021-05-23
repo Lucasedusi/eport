@@ -1,12 +1,11 @@
 import document from '../../assets/document.svg';
 
+import { FaCalendarAlt, FaUtensils } from 'react-icons/fa';
+
 import * as STD from './styles';
 
 const Bidding = () => (
   <STD.Container>
-    <STD.TopBar>
-      <STD.Title>Editais de Licitação</STD.Title>
-    </STD.TopBar>
     <STD.Help>
       <STD.Document src={document} />
       <STD.TitleHelp>
@@ -46,17 +45,57 @@ const Bidding = () => (
     <STD.Bidding>
       <STD.BiddingBox>
         <STD.BiddingHeader>
-          <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+          <STD.BiddingHeaderDate>
+            <FaCalendarAlt size={16} color="#60AFFF" />
+            <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+          </STD.BiddingHeaderDate>
           <STD.BiddingModalidade>Pregão Presencial</STD.BiddingModalidade>
         </STD.BiddingHeader>
 
         <STD.BiddingBody>
           <STD.BiddingTitle>Edital Nº 017/2021</STD.BiddingTitle>
-          <STD.BiddingText>Formalização de Ata de Registro de Preços para o <br/> fornecimento de refeições: Café da manhã, almoço e <br/> jantar para os servidores da Secretaria Municipal de <br/> Infraestrutura.l</STD.BiddingText>
+          <STD.BiddingText>
+            Formalização de Ata de Registro de Preços para o <br /> fornecimento de refeições: Café da manhã, almoço e{' '}
+            <br /> jantar para os servidores da Secretaria Municipal de <br /> Infraestrutura.l
+          </STD.BiddingText>
         </STD.BiddingBody>
 
+        <STD.BiddingHeader>
+          <STD.BiddingHeaderDate>
+            <FaUtensils size={16} />
+            <STD.BiddingDate>Alimentação</STD.BiddingDate>
+          </STD.BiddingHeaderDate>
+          <STD.BiddingMore>Ver Mais</STD.BiddingMore>
+        </STD.BiddingHeader>
+
       </STD.BiddingBox>
-    
+      
+      <STD.BiddingBox>
+        <STD.BiddingHeader>
+          <STD.BiddingHeaderDate>
+            <FaCalendarAlt size={16} color="#60AFFF" />
+            <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+          </STD.BiddingHeaderDate>
+          <STD.BiddingModalidade>Pregão Presencial</STD.BiddingModalidade>
+        </STD.BiddingHeader>
+
+        <STD.BiddingBody>
+          <STD.BiddingTitle>Edital Nº 017/2021</STD.BiddingTitle>
+          <STD.BiddingText>
+            Formalização de Ata de Registro de Preços para o <br /> fornecimento de refeições: Café da manhã, almoço e{' '}
+            <br /> jantar para os servidores da Secretaria Municipal de <br /> Infraestrutura.l
+          </STD.BiddingText>
+        </STD.BiddingBody>
+
+        <STD.BiddingHeader>
+          <STD.BiddingHeaderDate>
+            <FaUtensils size={16} />
+            <STD.BiddingDate>Alimentação</STD.BiddingDate>
+          </STD.BiddingHeaderDate>
+          <STD.BiddingMore>Ver Mais</STD.BiddingMore>
+        </STD.BiddingHeader>
+
+      </STD.BiddingBox>
     </STD.Bidding>
   </STD.Container>
 );

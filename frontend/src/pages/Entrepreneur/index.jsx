@@ -9,9 +9,6 @@ import detailsBadge from '../../assets/details.svg';
 
 const Entrepreneur = () => (
   <STD.Container>
-    <STD.TopBar>
-      <STD.Title>Trilha do Empreendedor</STD.Title>
-    </STD.TopBar>
     <STD.Help>
       <STD.Light src={luz} />
       <STD.TitleHelp>
