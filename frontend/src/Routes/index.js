@@ -5,6 +5,7 @@ import SignIn from '../pages/SignIn';
 import Dashboard from '../pages/Dashboard';
 import Entrepreneur from '../pages/Entrepreneur';
 import Bidding from '../pages/Bidding';
+import BiddingSingle from '../pages/BiddingSingle';
 import NotFound from '../pages/NotFound';
 
 const Routes = () => (
@@ -13,6 +14,8 @@ const Routes = () => (
     <Route path='/signin' component={SignIn} />
     <Route path='/dashboard' component={Dashboard} />
     <Route path='/entrepreneur' component={Entrepreneur} />
+    <Route path='/bidding' component={Bidding} />
+    <Route path='/biddingSingle' component={BiddingSingle} />
     <Route path='/bidding' component={Bidding} />
 
     <Route path='*' component={NotFound} />
