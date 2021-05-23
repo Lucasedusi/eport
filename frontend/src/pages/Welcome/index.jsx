@@ -41,7 +41,7 @@ const Welcome = () => {
       </STD.SubTitle>
 
       <STD.Button>
-        <Link to="/dashboard">Começar</Link>
+        <Link to="/entrepreneur">Começar</Link>
       </STD.Button>
     </STD.Container>
   );

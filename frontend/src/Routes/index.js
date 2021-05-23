@@ -23,10 +23,10 @@ const Routes = () => {
       <Route path="/bidding" component={Bidding} />
       <Route path="/trail" component={Trail} />
       <Route path='/signin' component={SignIn}>
-        {isUserSignedIn && <Redirect to="/dashboard" />}
+        {isUserSignedIn && <Redirect to="/entrepreneur" />}
       </Route>
       <Route path='/signup' component={SignUp}>
-        {isUserSignedIn && <Redirect to="/dashboard" />}
+        {isUserSignedIn && <Redirect to="/entrepreneur" />}
       </Route>
       <Route path="*" component={NotFound} />
     </Switch>

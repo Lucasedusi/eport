@@ -69,13 +69,6 @@ const BurgerMenu = () => {
         <FiArrowUpCircle size={20} />
         <span>Criar uma conta</span>
       </NavLink>}
-      {isUserSignedIn && <NavLink
-        onClick={() => signOut()}
-        title="Clique para sair de sua conta"
-      >
-        <FiLogOut size={20} />
-        <span>Sair do sistema</span>  
-      </NavLink>}
     </Menu>
   );
 };
