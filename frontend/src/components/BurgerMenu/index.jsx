@@ -1,10 +1,18 @@
 import { slide as Menu } from 'react-burger-menu';
 import { NavLink } from 'react-router-dom';
+import {
+  FiHome,
+  FiFileText,
+  FiMap,
+  FiArrowUpCircle,
+  FiArrowRightCircle,
+  FiLogOut,
+} from 'react-icons/fi';
 
 import { useAuth } from '../../hooks';
 
 const BurgerMenu = () => {
-  const { isUserSignedIn } = useAuth();
+  const { isUserSignedIn, signOut } = useAuth();
 
   const closeMenu = () => {
     const $btnClose = document.querySelector('#react-burger-cross-btn');
@@ -19,7 +27,8 @@ const BurgerMenu = () => {
         activeClassName="active-link"
         title="Clique para ir para o início"
       >
-        Início
+        <FiHome size={20} />
+        <span>Início</span>
       </NavLink>
       <NavLink
         to="/bidding"
@@ -27,7 +36,8 @@ const BurgerMenu = () => {
         activeClassName="active-link"
         title="Clique para ir para licitações"
       >
-        Licitações
+        <FiFileText size={20} />
+        <span>Licitações</span>
       </NavLink>
       <NavLink
         to="/trail"
@@ -36,8 +46,19 @@ const BurgerMenu = () => {
         activeClassName="active-link"
         title="Clique para ir para a trilha do empreendedor"
       >
-        Trilha do empreendedor
+        <FiMap size={20} />
+        <span>Trilha do empreendedor</span>
       </NavLink>
+      {!isUserSignedIn && <NavLink
+        to="/signin"
+        onClick={closeMenu}
+        exact
+        activeClassName="active-link"
+        title="Clique para entrar no sistema"
+      >
+        <FiArrowRightCircle size={20} />
+        <span>Entrar</span>
+      </NavLink>}
       {!isUserSignedIn && <NavLink
         to="/signup"
         onClick={closeMenu}
@@ -45,7 +66,15 @@ const BurgerMenu = () => {
         activeClassName="active-link"
         title="Clique para criar uma conta"
       >
-        Criar uma conta
+        <FiArrowUpCircle size={20} />
+        <span>Criar uma conta</span>
+      </NavLink>}
+      {isUserSignedIn && <NavLink
+        onClick={() => signOut()}
+        title="Clique para sair de sua conta"
+      >
+        <FiLogOut size={20} />
+        <span>Sair do sistema</span>  
       </NavLink>}
     </Menu>
   );
