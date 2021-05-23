@@ -1,17 +1,28 @@
-import { FiMenu } from 'react-icons/fi';
-import { useTheme } from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
-import logo from '../../assets/logo.png'
+import BurgerMenu from '../BurgerMenu';
+import logo from '../../assets/logo.png';
 
 import * as STD from './styles';
+import { useAuth } from '../../hooks';
 
 const Header = () => {
-  const theme = useTheme();
+  const history = useHistory();
+  const { isUserSignedIn, signOut } = useAuth();
+
   return (
     <STD.Container>
-      <FiMenu color={theme.colors.textOnSecondary} size={25} />
+      <BurgerMenu />
       <STD.Logo src={logo} alt="logo"/>
-      <STD.Login>Login</STD.Login>
+      {isUserSignedIn ? (
+        <STD.Login onClick={() => signOut()}>
+          Sair
+        </STD.Login>
+      ) : (
+        <STD.Login onClick={() => history.push('/signin')}>
+          Entrar
+        </STD.Login>
+      )}
     </STD.Container>
   );
 };

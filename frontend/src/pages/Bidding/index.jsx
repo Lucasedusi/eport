@@ -1,12 +1,12 @@
 import document from '../../assets/document.svg';
+import { Link } from 'react-router-dom';
+
+import { FaCalendarAlt, FaUtensils } from 'react-icons/fa';
 
 import * as STD from './styles';
 
 const Bidding = () => (
   <STD.Container>
-    <STD.TopBar>
-      <STD.Title>Editais de Licitação</STD.Title>
-    </STD.TopBar>
     <STD.Help>
       <STD.Document src={document} />
       <STD.TitleHelp>
@@ -44,7 +44,118 @@ const Bidding = () => (
     </STD.Content>
 
     <STD.Bidding>
-      
+      <Link to="/biddingSingle">
+        <STD.BiddingBox>
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaCalendarAlt size={16} color="#60AFFF" />
+              <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+            <STD.BiddingModalidade>Pregão Presencial</STD.BiddingModalidade>
+          </STD.BiddingHeader>
+
+          <STD.BiddingBody>
+            <STD.BiddingTitle>Edital Nº 017/2021</STD.BiddingTitle>
+            <STD.BiddingText>
+              Formalização de Ata de Registro de Preços para o <br /> fornecimento de refeições: Café da manhã, almoço e{' '}
+              <br /> jantar para os servidores da Secretaria Municipal de <br /> Infraestrutura.l
+            </STD.BiddingText>
+          </STD.BiddingBody>
+
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaUtensils size={16} />
+              <STD.BiddingDate>Alimentação</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+
+            <STD.BiddingMore>Ver Mais</STD.BiddingMore>
+          </STD.BiddingHeader>
+        </STD.BiddingBox>
+      </Link>
+
+      <Link to="/biddingSingle">
+        <STD.BiddingBox>
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaCalendarAlt size={16} color="#60AFFF" />
+              <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+            <STD.BiddingModalidadeOne>Tomada de Preço</STD.BiddingModalidadeOne>
+          </STD.BiddingHeader>
+
+          <STD.BiddingBody>
+            <STD.BiddingTitle>Edital Nº 018/2021</STD.BiddingTitle>
+            <STD.BiddingText>
+              Formalização de Ata de Registro de Preços para o <br /> fornecimento de refeições: Café da manhã, almoço e{' '}
+              <br /> jantar para os servidores da Secretaria Municipal de <br /> Infraestrutura.l
+            </STD.BiddingText>
+          </STD.BiddingBody>
+
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaUtensils size={16} />
+              <STD.BiddingDate>Alimentação</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+            <STD.BiddingMore>Ver Mais</STD.BiddingMore>
+          </STD.BiddingHeader>
+        </STD.BiddingBox>
+      </Link>
+
+      <Link to="/biddingSingle">
+        <STD.BiddingBox>
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaCalendarAlt size={16} color="#60AFFF" />
+              <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+            <STD.BiddingModalidadeTwo>Chamamento Público</STD.BiddingModalidadeTwo>
+          </STD.BiddingHeader>
+
+          <STD.BiddingBody>
+            <STD.BiddingTitle>Edital Nº 019/2021</STD.BiddingTitle>
+            <STD.BiddingText>
+              Formalização de Ata de Registro de Preços para o <br /> fornecimento de refeições: Café da manhã, almoço e{' '}
+              <br /> jantar para os servidores da Secretaria Municipal de <br /> Infraestrutura.l
+            </STD.BiddingText>
+          </STD.BiddingBody>
+
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaUtensils size={16} />
+              <STD.BiddingDate>Alimentação</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+            <STD.BiddingMore>Ver Mais</STD.BiddingMore>
+          </STD.BiddingHeader>
+        </STD.BiddingBox>
+      </Link>
+
+      <Link to="/biddingSingle">
+        <STD.BiddingBox>
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaCalendarAlt size={16} color="#60AFFF" />
+              <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+            <STD.BiddingModalidadeThre>Concorrência</STD.BiddingModalidadeThre>
+          </STD.BiddingHeader>
+
+          <STD.BiddingBody>
+            <STD.BiddingTitle>Edital Nº 020/2021</STD.BiddingTitle>
+            <STD.BiddingText>
+              Formalização de Ata de Registro de Preços para o <br /> fornecimento de refeições: Café da manhã, almoço e{' '}
+              <br /> jantar para os servidores da Secretaria Municipal de <br /> Infraestrutura.l
+            </STD.BiddingText>
+          </STD.BiddingBody>
+
+          <STD.BiddingHeader>
+            <STD.BiddingHeaderDate>
+              <FaUtensils size={16} />
+              <STD.BiddingDate>Alimentação</STD.BiddingDate>
+            </STD.BiddingHeaderDate>
+            <STD.BiddingMore>Ver Mais</STD.BiddingMore>
+          </STD.BiddingHeader>
+        </STD.BiddingBox>
+      </Link>
     </STD.Bidding>
   </STD.Container>
 );

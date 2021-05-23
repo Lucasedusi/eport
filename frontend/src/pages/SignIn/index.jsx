@@ -1,21 +1,9 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useAuth } from '../../hooks';
-import logo from '../../assets/logo.png';
 
-import {
-  Container,
-  Form,
-  FormFooter,
-  Input,
-  Title,
-  ErrorContainer,
-  NotFoundError,
-  NoInputError,
-  Button,
-  ActionContainer,
-} from './styles';
+import * as STD from './styles';
 
 const SignIn = () => {
   const [values, setValues] = useState({
@@ -23,82 +11,65 @@ const SignIn = () => {
     password: '',
     inputErr: '',
   });
-  const { signIn, error } = useAuth();
+  const { signIn, error, setError } = useAuth();
 
-  const handleInputChange = useCallback(
-    ({ target }) => {
-      const { name, value } = target;
-      setValues({ ...values, [name]: value, inputErr: '' });
-    },
-    [values]
-  );
+  const handleInputChange = ({ target }) => {
+    const { name, value } = target;
+    setError(null);
+    setValues({ ...values, [name]: value, inputErr: '' });
+  };
 
-  const handleSignIn = useCallback(
-    event => {
-      event.preventDefault();
-      const { username, password } = values;
+  const handleSignIn = event => {
+    event.preventDefault();
+    const { username, password } = values;
 
-      if (username.includes(' ')) {
-        return setValues({
-          ...values,
-          inputErr: 'Não é permitido espaços no Username',
-        });
-      }
-      if (!username || !password) {
-        return setValues({ ...values, inputErr: 'Preenchimento obrigatório' });
-      }
-      signIn({ username, password });
-    },
-    [signIn, values]
-  );
+    if (!username || !password) {
+      return setValues({ ...values, inputErr: 'Preenchimento obrigatório' });
+    }
+    signIn({ username, password });
+  };
 
   return (
-    <Container>
-      <Form onSubmit={handleSignIn}>
-        <Title>
-          <img src={logo} alt="logo" />
-          <p>
-            Móveis planejados <br />
-            Entrar no sistema
-          </p>
-        </Title>
-        <ErrorContainer>
-          <NotFoundError error={error}>{error?.data.error}</NotFoundError>
-          <NoInputError error={values.inputErr}>{values.inputErr}</NoInputError>
-        </ErrorContainer>
-        <Input
+    <STD.Container>
+      <STD.Form>
+        Bem vindo <br />Sua jornada começa com a criação de uma conta
+        <STD.ErrorContainer>
+          <STD.NotFoundError error={error}>{error?.data.message}</STD.NotFoundError>
+          <STD.NoInputError error={values.inputErr}>{values.inputErr}</STD.NoInputError>
+        </STD.ErrorContainer>
+        <STD.Input
           autoFocus={true}
           name="username"
           placeholder="Username"
-          title="Digite um Username"
+          title="Digite seu CPF/CNPJ"
           type="text"
           error={values.inputErr}
           value={values.username}
           onChange={handleInputChange}
         />
-        <Input
+        <STD.Input
           name="password"
           placeholder="Password"
-          title="Digite um Password"
+          title="Digite seu Password"
           type="password"
           error={values.inputErr}
           value={values.password}
           onChange={handleInputChange}
         />
-        <Button type="submit" title="Clique para entrar no sistema">
-          Entrar
-        </Button>
-        <ActionContainer>
-          <p title="Ainda não implementado">Esqueceu sua senha?</p>
+        <STD.Button type="submit" title="Clique para entrar no sistema">
+          <a href="#" onClick={handleSignIn}>Entrar</a>
+        </STD.Button>
+        <STD.ActionContainer>
+          <p title="Ainda não implementado"></p>
           <Link to="/signup" title="Crie uma conta para entrar no sistema">
             Criar uma conta
           </Link>
-        </ActionContainer>
-      </Form>
-      <FormFooter>
-        <p>Leonardo & Jorge</p>
-      </FormFooter>
-    </Container>
+        </STD.ActionContainer>
+      </STD.Form>
+      <STD.FormFooter>
+        <p>TechJS</p>
+      </STD.FormFooter>
+    </STD.Container>
   );
 };
 
