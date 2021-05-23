@@ -121,3 +121,28 @@ export const TitleHeader = styled.p`
 
   color: #666666;
 `;
+
+export const Background = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Img = styled.img`
+  width: 90%;
+`;
+
+export const Button = styled.a`
+  padding: 20px;
+  display: flex;
+  background-color: #60AFFF;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+
+  a {
+    color: #fff;
+    width: 100%;
+  }
+`;
