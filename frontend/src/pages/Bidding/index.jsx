@@ -44,7 +44,19 @@ const Bidding = () => (
     </STD.Content>
 
     <STD.Bidding>
-      
+      <STD.BiddingBox>
+        <STD.BiddingHeader>
+          <STD.BiddingDate>Abertura: 23/05/2021</STD.BiddingDate>
+          <STD.BiddingModalidade>Pregão Presencial</STD.BiddingModalidade>
+        </STD.BiddingHeader>
+
+        <STD.BiddingBody>
+          <STD.BiddingTitle>Edital Nº 017/2021</STD.BiddingTitle>
+          <STD.BiddingText>Formalização de Ata de Registro de Preços para o <br/> fornecimento de refeições: Café da manhã, almoço e <br/> jantar para os servidores da Secretaria Municipal de <br/> Infraestrutura.l</STD.BiddingText>
+        </STD.BiddingBody>
+
+      </STD.BiddingBox>
+    
     </STD.Bidding>
   </STD.Container>
 );

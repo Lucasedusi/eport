@@ -98,9 +98,66 @@ export const BiddingBox = styled.div`
   display: center;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 12px;
   background: #ffffff;
   box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 100%;
+`;
+
+export const BiddingHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const BiddingDate = styled.p`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666666;
+`;
+
+export const BiddingModalidade = styled.p`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  background: #60afff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 5px;
+`;
+
+export const BiddingBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+`;
+
+export const BiddingTitle = styled.div`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 7px;
+`;
+
+export const BiddingText = styled.div`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666666;
 `;
