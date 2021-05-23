@@ -30,6 +30,25 @@ export const Form = styled.form`
   }
 `;
 
+export const Title = styled.h1`
+  margin-bottom: 1rem;
+
+  img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: ${({ theme }) => theme.colors.text};
+    text-align: center;
+  }
+`;
+
+export const SubTitle = styled.h3`
+  font-size: 1rem;
+  margin-bottom: 1rem;
+`;
+
 export const ErrorContainer = styled.div``;
 
 export const NotFoundError = styled.p`

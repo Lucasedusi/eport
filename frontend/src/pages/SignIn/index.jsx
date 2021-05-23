@@ -32,7 +32,8 @@ const SignIn = () => {
   return (
     <STD.Container>
       <STD.Form>
-        Bem vindo <br />Sua jornada começa com a criação de uma conta
+        <STD.Title>Boas-vindas novamente!</STD.Title>
+        <STD.SubTitle>Pronto pra avançar na sua jornada?</STD.SubTitle>
         <STD.ErrorContainer>
           <STD.NotFoundError error={error}>{error?.data.message}</STD.NotFoundError>
           <STD.NoInputError error={values.inputErr}>{values.inputErr}</STD.NoInputError>
